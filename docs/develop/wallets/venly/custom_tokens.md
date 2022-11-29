@@ -4,8 +4,7 @@ title: Adding Custom Tokens in Venly (prev. Arkane)
 sidebar_label: Custom Tokens
 description: Support for custom ERC20/ERC721/ERC1155 tokens on Polygon network
 keywords:
-  - docs
-  - matic
+  - wiki
   - polygon
   - custom tokens
   - nfts
@@ -26,6 +25,6 @@ You can always contact the Venly team via their in-app chat and ask them to add 
 
 ## Non-Fungible Tokens (NFTs)
 
-Venly has developed its service is such a way that it will automaticlly pick up custom created Non-Fungible Tokens (NFTs) if they follow the ERC721 and ERC1155 standard. This makes Venly the only wallet platform to show all NFTs that are live on the Polygon network.
+Venly has developed its service in such a way that it will automatically pick up custom created Non-Fungible Tokens (NFTs) if they follow the ERC721 and ERC1155 standard. This makes Venly the only wallet platform to show all NFTs that are live on the Polygon network.
 
 ![The Hulk ERC1155 NFT on Polygon](img/06.png)

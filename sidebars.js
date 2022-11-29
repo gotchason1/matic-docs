@@ -121,8 +121,7 @@ module.exports = {
             "develop/wallets/venly/intro",
             "develop/wallets/venly/create-wallet",
             "develop/wallets/venly/network",
-            "develop/wallets/venly/custom-tokens",
-            "develop/wallets/venly/support",
+            "develop/wallets/venly/custom-tokens"
           ],
         },
         "develop/wallets/fortmatic",

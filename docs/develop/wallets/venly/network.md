@@ -4,8 +4,7 @@ title: Network
 sidebar_label: Network
 description: How to switch between Polygon testnet and mainnet.
 keywords:
-  - docs
-  - matic
+  - wiki
   - polygon
   - venly
   - wallet
@@ -21,7 +20,7 @@ Below you will find an overview of the public Venly environments and networks to
 
 :::note
 
-If you are a developer, it is possible to use different networks or even your own infrastructure. For more information, refer to [the Venly documentation](https://docs.venly.io/widget/).
+If you are a developer, it is possible to use different networks or even your own infrastructure. For more information, refer to [<ins>the Venly documentation</ins>](https://docs.venly.io/widget/).
 
 :::
 

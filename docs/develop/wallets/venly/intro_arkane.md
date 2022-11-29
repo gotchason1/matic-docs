@@ -25,7 +25,7 @@ Each application is unique and has different needs, therefore they provide diffe
 
 - Support Web and Mobile
 - Offers social logins
-- Offers a fiat-on-ramp
+- Offers fiat-on-ramp
 - Supports both Polygon and Ethereum
 - Supports NFTs (ERC721 and ERC1155) on Polygon
 - Easy to integrate using Web3 
@@ -38,22 +38,22 @@ If you already support Web3 technology, you can improve the UX within your appli
 
 By making use of our Web3 provider you are able to leverage the full potential of Venly with minimal effort and you will be able to onboard users that are less tech savvy without making them leave your application or download third party plugins. Integrating just takes 2 steps and ~5 minutes.
 
-:::tip Don't support Web3 yet?
+:::tip 
 
-Don't worry! We have got you covered with our [Venly Widget](https://docs.venly.io/widget/).
+Venly provides a [<ins>Venly Widget</ins>](https://docs.venly.io/widget/) to help developers generate Web 3 support to their applications. 
 
 :::
 
 
 ### Add the library to your project
 
-Install the library by downloading it to your project via NPM
+Install the library by downloading it to your project via NPM.
 
 ```
 npm i @venly/web3-provider
 ```
 
-followed by adding the script to the head of your page.
+Add the script to the head of your page.
 
 ```
 <script src="/node_modules/@venly/web3-provider/dist/web3-provider.js"></script>
@@ -71,23 +71,20 @@ Venly.createProviderEngine({clientId: 'Testaccount'}).then(provider => {
 });
 ```
 
-The web3 instance now works as if it was injected by parity or metamask. You can fetch wallets, sign transactions, and messages.
+The web3 instance now works as if it was injected by Parity or Metamask. You can fetch wallets, sign transactions, and messages.
 
-### Congratulations! Your dApp now supports Venly
+**Congratulations! Your dApp now supports Venly.**
 
 :::info
 To connect with a personalised [Client ID](https://docs.venly.io/widget/deep-dive/authentication#client-id), and access our production environment, please request access one using this [<ins>form</ins>](https://forms.venly.io/clientID).
 
 :::
 
-To know more about the wonderful world Venly has to offer, [check out their documentation](https://docs.venly.io/widget/).
+## More about Venly
 
-## Video Guides
+What makes Venly (prev. Arkane) stand out is their commitment to supporting the ecosystem. Not only their wallet users, by explaining what gas is, or by helping them import an Ethereum wallet into Polygon, but also the developers that are using Venly to build new upcoming products.
 
-### Send MATIC tokens to an Email Address on Polygon
-[![Send Matic tokens to an email address on Polygon Network](https://i.snipboard.io/OzXmrN.jpg)](https://www.youtube.com/watch?v=3gehPvX4DOo&list=PLh3bJA02WlKErlpDexw_cFOlPfMQiU67U&index=1)
+Even in their test environments, they add an in-app chat so that developers can directly communicate with the team behind the Venly platform. In case you want to learn more, check out their [detailed product documentation](https://docs.venly.io/widget/).
 
-### Transfer of a Polygon NFT 
-[![Transfer of a Polygon NFT](https://i.snipboard.io/dLkM3t.jpg)](https://www.youtube.com/watch?v=SLxAIXRv7ec&list=PLh3bJA02WlKErlpDexw_cFOlPfMQiU67U)
 
 
