@@ -3,8 +3,7 @@ id: torus
 title: Torus
 description: Torus is a non-custodial key management system for dApps
 keywords:
-  - docs
-  - matic
+  - wiki
   - polygon
   - torus
   - wallet
@@ -16,7 +15,7 @@ image: https://wiki.polygon.technology/img/polygon-wiki.png
 Torus is a user-friendly, secure, and non-custodial key management system for decentralized apps. We're focused on providing mainstream users a gateway to the decentralized ecosystem.
 
 **Type**: Non-custodial / HD <br/>
-**Private Key Storage**: User’s local browser storage / Encrypted and stored on Torus’ servers <br/>
+**Private Key Storage**: User’s local browser storage / Encrypted and stored on Torus servers <br/>
 **Communication to Ethereum Ledger**: Infura <br/>
 **Private key encoding**: Mnemonic / Social-Auth-login <br/>
 
@@ -59,4 +58,4 @@ const web3 = new Web3(torus.provider);
 
 ## CustomAuth Integration
 
-If you are looking to control your own UX, from login to every interaction, then CustomAuth is the integration for you. You can integrate via one of our SDKs depending on the platform(s) you are building on. For more info, please visit [Torus CustomAuth integration](https://docs.tor.us/customauth/get-started).
+If you are looking to control your own UX, from login to every interaction, then you can use CustomAuth. You can integrate via one of their SDKs depending on the platform(s) you are building on. For more info, please visit [Torus CustomAuth integration](https://docs.tor.us/customauth/get-started).

@@ -3,8 +3,7 @@ id: slashauth
 title: SlashAuth
 description: SlashAuth provides authentication and authorization for dApps.
 keywords:
-  - docs
-  - matic
+  - wiki
   - polygon
   - slashauth
   - authentication
@@ -33,7 +32,7 @@ npm i @slashauth/slashauth-react
 
 ## Configure the `SlashAuthProvider` component
 
-The SlashAuth SDK uses [React Context](https://reactjs.org/docs/context.html) to manage state and expose it to your components. In order to integrate `/auth` into your app, you must provide the context at the root of your app:
+The SlashAuth SDK uses [React Context](https://reactjs.org/docs/context.html) to manage state and expose it to components. In order to integrate `/auth` into your app, you must provide the context at the root of your app:
 
 ```typescript title="index.tsx"
 import ReactDOM from 'react-dom/client';
@@ -70,7 +69,7 @@ export const LoginButton = () => {
 
 ## Authentication information
 
-The SlashAuth SDK exposes information about the current user and their logged in status via data returned by the `useSlashAuth()` hook. Because this data propagates via React Context, any time it changes your components will be notified and rerender. Let's create a status component
+The SlashAuth SDK exposes information about the current user and their logged in status via data returned by the `useSlashAuth()` hook. Because this data propagates via React Context, any time it changes components will be notified and rerender. Let's create a status component.
 
 ```typescript title="LoginStatus.tsx"
 import { useSlashAuth } from "@slashauth/slashauth-react";
@@ -121,7 +120,7 @@ export const LoginStatus = () => {
 
 ## Logout button
 
-The SlashAuth SDK exposes logout functionality that logs the user out both locally and invalidates their tokens remotely. Let's build a button to add this functionality.
+The SlashAuth SDK exposes a logout functionality that disconnects the user locally and invalidates their tokens remotely. Let's build a button to add this functionality.
 
 ```typescript title="LogoutButton.tsx"
 import { useSlashAuth } from "@slashauth/slashauth-react";

@@ -3,8 +3,7 @@ id: walletconnect
 title: WalletConnect
 description: An open protocol that creates a DApp-Wallet communication.
 keywords:
-  - docs
-  - matic
+  - wiki
   - polygon
   - dapp
   - wallet
@@ -69,7 +68,7 @@ const ropstenWeb3 = new Web3(ropstenProvider)
 
 ## Instantiating Contracts
 
-Once we have our **web3 object**, the instantiating of contracts involves the same steps we followed for Metamask. Make sure you have your **contract ABI** and **address** already in place.
+Once we have our **web3 object**, the instantiating of contracts involves the same steps as for Metamask. Make sure you have your **contract ABI** and **address** already in place.
 
 ```js
 const myContractInstance = new this.maticWeb3.eth.Contract(myContractAbi, myContractAddress)
@@ -79,15 +78,15 @@ const myContractInstance = new this.maticWeb3.eth.Contract(myContractAbi, myCont
 
 :::info
 
-The private key will remain in user’s wallet and the app does not access it in any way!
+The private key will remain in the user’s wallet and the **app does not access it in any way**.
 
 :::
 
-Like discussed above, we have two types of functions in Ethereum, depending upon the interaction with the blockchain. We `call()` when we read data and `send()` when we write data.
+We have two types of functions in Ethereum, depending upon the interaction with the blockchain. We `call()` when we read data and `send()` when we write data.
 
 ### Calling `call()` Functions
 
-Reading data doesn’t require a signature, therefore the process is the same as discussed above:
+Reading data doesn’t require a signature, therefore the code should be like this:
 
 ```js
 this.myContractInstance.methods

@@ -3,8 +3,7 @@ id: fortmatic
 title: Fortmatic
 description: Use Formatic SDK to integrate your dApp with Polygon
 keywords:
-  - docs
-  - matic
+  - wiki
   - polygon
   - fortmatic
   - integrate
@@ -17,11 +16,14 @@ Fortmatic SDK allows you to easily integrate your dApp with the Ethereum blockch
 
 ## Installation
 
+Use the following command to install Fortmatic's wallet latest version:
+
 ```bash
 $ npm i --save fortmatic@latest
 ```
 
 ## Example
+Here is an example of application using Fortmatic:
 
 ```js title="example.js"
 import Fortmatic from 'fortmatic';

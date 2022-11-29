@@ -90,45 +90,54 @@ module.exports = {
         "develop/wallets/getting-started",
         {
           type: "category",
-          label: "Metamask",
+          label: "Third-Party Wallet Applications",
           link: {
             type: "generated-index",
           },
           items: [
-            "develop/metamask/overview",
-            "develop/metamask/hello",
-            "develop/metamask/config-polygon-on-metamask",
-            "develop/metamask/custom-tokens",
-            "develop/metamask/multiple-accounts",
+            {
+              type: "category",
+              label: "Metamask",
+              link: {
+                type: "generated-index",
+              },
+              items: [
+                "develop/metamask/overview",
+                "develop/metamask/hello",
+                "develop/metamask/config-polygon-on-metamask",
+                "develop/metamask/custom-tokens",
+                "develop/metamask/multiple-accounts",
+              ],
+            },
+            {
+              type: "category",
+              label: "Wallet Link",
+              link: {
+                type: "generated-index",
+              },
+              items: ["develop/metamask/config-polygon-on-wallet-link"],
+            },
+    
+            {
+              type: "category",
+              label: "Venly",
+              link: {
+                type: "generated-index",
+              },
+              items: [
+                "develop/wallets/venly/intro",
+                "develop/wallets/venly/create-wallet",
+                "develop/wallets/venly/network",
+                "develop/wallets/venly/custom-tokens"
+              ],
+            },
+            "develop/wallets/fortmatic",
+            "develop/wallets/portis",
+            "develop/wallets/torus",
+            "develop/wallets/walletconnect",
+            "develop/wallets/slashauth"
           ],
         },
-        {
-          type: "category",
-          label: "Wallet Link",
-          link: {
-            type: "generated-index",
-          },
-          items: ["develop/metamask/config-polygon-on-wallet-link"],
-        },
-
-        {
-          type: "category",
-          label: "Venly",
-          link: {
-            type: "generated-index",
-          },
-          items: [
-            "develop/wallets/venly/intro",
-            "develop/wallets/venly/create-wallet",
-            "develop/wallets/venly/network",
-            "develop/wallets/venly/custom-tokens"
-          ],
-        },
-        "develop/wallets/fortmatic",
-        "develop/wallets/portis",
-        "develop/wallets/torus",
-        "develop/wallets/walletconnect",
-        "develop/wallets/slashauth",
         {
           type: "category",
           label: "Polygon Wallet Suite",
