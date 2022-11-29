@@ -32,20 +32,11 @@ Avail is a blockchain that is laser-focused on data availability: ordering and r
 
 ## Current Availability and Scaling Challenges
 
-<Tabs
-  defaultValue="da"
-  values={[
-    { label: 'Data Availability', value: 'da', },
-    { label: 'Rollup Scaling', value: 'scaling', },
-  ]
-}>
-<TabItem value="da">
-
 ### What is the data availability problem?
 
-Peers in a blockchain network need a way to ensure that all the data of a newly proposed block is 
-readily available. If the data is not available, the block might contain malicious transactions 
-which are being hidden by the block producer. Even if the block contains non-malicious transactions, 
+Peers in a blockchain network need a way to ensure that all the data of a newly proposed block is
+readily available. If the data is not available, the block might contain malicious transactions
+which are being hidden by the block producer. Even if the block contains non-malicious transactions,
 hiding them might compromise the security of the system.
 
 ### Avail's approach to data availability
@@ -81,9 +72,6 @@ Avail enables new chains to be created without needing to spin up a new validato
 Fast provable finality via Nominated Proof of Stake. Backed by KZG
 commitments and erasure coding.
 
-</TabItem>
-<TabItem value="scaling">
-
 Start by checking out this [blog post](https://blog.polygon.technology/polygon-research-ethereum-scaling-with-rollups-8a2c221bf644/) on scaling Ethereum with Rollups.
 
 ## Avail-Powered Validiums
@@ -99,9 +87,6 @@ Avail is a blockchain optimized for data availability. Any rollup that wishes to
 The Avail team will make this data availability verification simple on Ethereum by building an attestation bridge to post data availability attestations directly to Ethereum. This will make the verification contract's job a simple one, since the DA attestations will already be on-chain. This bridge is currently in design; please reach out to the Avail team for more information or to join our early access program.
 
 :::
-
-</TabItem>
-</Tabs>
 
 ## See Also
 

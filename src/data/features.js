@@ -15,8 +15,8 @@ export const firstRow = [
   },
   {
       title: "Governance",
-      status: "Beginner: Docs Coming Soon",
-      linkUrl: "docs/maintain/govern/governance",
+      status: "Beginner",
+      linkUrl: "docs/maintain/govern/governance-posv1",
       imageUrl: "img/supernet.svg",
       description: "Vote on proposals and participate in the Polygon DAO."
   },

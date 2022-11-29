@@ -1,8 +1,8 @@
 ---
-id: zkNode
-title: zkNode
-sidebar_label: zkNode
-description: "Detailed description of zkNodes"
+id: overview
+title: zkNode Overview
+sidebar_label: Overview
+description: Detailed overview of zkNode and its setup
 keywords:
   - docs
   - zk rollups
@@ -14,10 +14,6 @@ keywords:
   - zkNode
 image: https://matic.network/banners/matic-network-16x9.png
 ---
-
-# zkNode
-
-## Introduction
 
 A zkNode is the software needed to run a zkEVM node. It is a client that the network requires to implement the synchronization and govern the roles of the participants (Sequencers or Aggregators). Polygon zkEVM participants will choose how they participate:
 
@@ -66,7 +62,7 @@ RPC (Remote Procedure Call) is a JSON-RPC interface compatible with Ethereum. Fo
 
 This subcomponent implements the Merkle Tree and connects to the DB backend. It checks integrity at the block level (information related to gas and block size, among others) and some transaction-related information (signatures, sufficient balance). It also stores the Smart Contract code into the Merkle tree and processes transactions using EVM.
 
-## zkProver
+## [zkProver](/docs/zkEVM/architecture/zkProver)
 
 All the rules for a transaction to be valid are implemented and enforced in the zkProver. A zkProver performs complex mathematical computations in the form of polynomials and assembly language. These are later verified on a Smart Contract.
 

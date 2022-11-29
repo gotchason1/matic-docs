@@ -2,33 +2,35 @@
 id: chainlink
 title: Chainlink
 sidebar_label: Chainlink
-description: "Decentralized oracle network with access to external data sources."
+description: Chainlink is a decentralized blockchain oracle network built on Ethereum.
 keywords:
-  - docs
-  - matic
+  - wiki
+  - polygon
   - chainlink
   - oracle
-image: https://matic.network/banners/matic-network-16x9.png 
+  - decentralized
+  - data
+image: https://wiki.polygon.technology/img/polygon-wiki.png
 ---
+
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-Chainlink enables your contracts to access to *any* external data source, through a decentralized oracle network. Whether your contract requires sports results, the latest weather, or any other publicly available data, Chainlink provides the tools required for your contract to consume it.
+**Chainlink** enables your contracts to **access any external data source**, through a decentralized oracle network. Whether your contract requires sports results, the latest weather, or any other publicly available data, Chainlink provides the tools required for your contract to consume it.
 
-# Decentralized Data
+## Decentralized Data
 
-One of Chainlinks most powerful features, is already decentralized, aggregated, and ready to be digested on-chain data on most of the most popular cryptocurrenies. These are known as [Chainlink Data Feeds](https://docs.chain.link/docs/using-chainlink-reference-contracts). 
+One of Chainlink's most powerful features is already decentralized, aggregated, and ready to be digested on-chain data on most of the popular cryptocurrencies. These are known as [**Chainlink Data Feeds**](https://docs.chain.link/docs/using-chainlink-reference-contracts). 
 
 Here is a working example of a contract that pulls the latest price of MATIC in USD on the Mumbai Testnet. 
 
-All you need to do, is swap out the address [with any address of a data feed](https://docs.chain.link/docs/matic-addresses#config) that you wish, and you can start digesting price information.
-```
+All you need to do is swap out the address [with any address of a data feed](https://docs.chain.link/docs/matic-addresses#config) that you wish, and you can start digesting price information.
 
+```
 pragma solidity ^0.6.7;
 
 import "@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol";
 
 contract PriceConsumerV3 {
-
     AggregatorV3Interface internal priceFeed;
 
     /**
@@ -56,42 +58,48 @@ contract PriceConsumerV3 {
 }
 ```
 
-# Request and Receive Cycle
+## Request and Receive Cycle
 
 Chainlink's Request and Receive cycle enables your smart contracts to make a request to any external API and consume the response. To implement it, your contract needs to define two functions: 
 
-1. One to request the data
-2. Another to receive the response.
+1. One to **request the data**, and
+2. Another to **receive the response**.
 
-To request data, your contract builds a request object which it provides to an oracle. Once the oracle has reached out to the API and parsed the response, it will attempt to send the data back to your contract using the callback function defined in your smart contract.
+To request data, your contract builds a `request` object which it provides to an oracle. Once the oracle has reached out to the API and parsed the response, it will attempt to send the data back to your contract using the callback function defined in your smart contract.
 
-# Uses
+## Uses
 
-1. Chainlink Data Feeds 
-   1. These are decentralized data reference points already aggregated on-chain, and the quickest, easiest, and cheapest way to get data from the real world. Currently supports some of the most popular cryptocurrency and fiat pairs. 
-2. Chainlink VRF    
-   1. Get provably random numbers, where the random number is cryptographically guaranteed to be random.
-3. Chainlink API Calls
-   1. How to configure your smart contract to work with traditional APIs, and customize to get any data, send any requests over the internet, and more. 
+1. **Chainlink Data Feeds**
 
-For working with Data Feeds, use the [Polygon Data Feeds](https://docs.chain.link/docs/matic-addresses) from the Chainlink documenation.
+    These are decentralized data reference points already aggregated on-chain, and the quickest, easiest, and cheapest way to get data from the real world. Currently supports some of the most popular cryptocurrency and fiat pairs.
 
-For working with Chainlink VRF, use the [Polygon VRF](https://docs.chain.link/docs/vrf-contracts) addresses from the [Chainlink documentation](https://docs.chain.link/docs/get-a-random-number).
-# Code Example
+    For working with Data Feeds, use the [**Polygon Data Feeds**](https://docs.chain.link/data-feeds/price-feeds/addresses/?network=polygon) from the Chainlink documenation.
 
-To interact with external APIs, your smart contract should inherit from <a href="https://github.com/smartcontractkit/chainlink/blob/develop/evm-contracts/src/v0.6/ChainlinkClient.sol" target="_blank">`ChainlinkClient`</a>, which is a contract designed to make processing requests easy. It exposes a struct called `Chainlink.Request`, which your contract should use to build the API request. 
+2. **Chainlink Verifiable Randomness Function**
 
-The request should define the oracle address, the job id, the fee, adapter parameters, and the callback function signature. In this example, the request is built in the `requestEthereumPrice` function.
+   Get provably random numbers, where the random number is cryptographically guaranteed to be random.
+
+   For working with Chainlink VRF, use the [**Polygon VRF**](https://docs.chain.link/vrf/v2/subscription/supported-networks) addresses from the [Chainlink documentation](https://docs.chain.link/vrf/v2/subscription/examples/get-a-random-number).
+
+3. **Chainlink API Calls**
+
+   How to configure your smart contract to work with traditional APIs, and customize to get any data, send any requests over the internet, and more. 
+
+## Code Example
+
+To interact with external APIs, your smart contract should inherit from [`ChainlinkClient.sol`](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.6/ChainlinkClient.sol), which is a contract designed to make processing requests easy. It exposes a struct called `Chainlink.Request`, which your contract should use to build the API request. 
+
+The request should define the oracle address, job id, fee, adapter parameters, and the callback function signature. In this example, the request is built in the `requestEthereumPrice` function.
 
 `fulfill` is defined as the callback function.
 
-```javascript
+```
 pragma solidity ^0.6.0;
 
 import "@chainlink/contracts/src/v0.6/ChainlinkClient.sol";
 
 contract APIConsumer is ChainlinkClient {
-  
+
     uint256 public price;
     
     address private oracle;
@@ -160,31 +168,31 @@ contract APIConsumer is ChainlinkClient {
 }
 ```
 
-# Mainnet Polygon LINK token
+## Mainnet Polygon LINK token
 
-To get mainnet Polygon LINK token from the Ethereum mainnet, you must follow a 2 step process.
+To get mainnet Polygon LINK token from the Ethereum Mainnet, you must follow a 2-step process.
 
 1. Bridge your LINK using the Plasma or [PoS bridge](https://wallet.polygon.technology/bridge).
 2. Swap the LINK for the ERC677 version via the [Pegswap, deployed by the Chainlink](https://pegswap.chain.link/). 
 
-The Polygon bridge brings over an ERC20 version of LINK, and LINK is an ERC677, so we just have to update it with this swap. 
-# Addresses
+The Polygon bridge brings over an ERC20 version of LINK, and LINK is an ERC677, so we just have to update it with this swap.
+
+## Addresses
 
 There are currently only a few operational Chainlink oracles on the Polygon Mumbai Testnet. You can always run one yourself too, and list it on the Chainlink Marketplace.
 
-* Oracle: <a href="https://mumbai.polygonscan.com/address/0x58bbdbfb6fca3129b91f0dbe372098123b38b5e9/transactions" target="_blank">`0xb33D8A4e62236eA91F3a8fD7ab15A95B9B7eEc7D`</a>
-* LINK: <a href="https://mumbai.polygonscan.com/address/0x70d1F773A9f81C852087B77F6Ae6d3032B02D2AB/transactions" target="_blank">`0x326C977E6efc84E512bB9C30f76E30c160eD06FB`</a>
+* Oracle: [`0xb33D8A4e62236eA91F3a8fD7ab15A95B9B7eEc7D`](https://mumbai.polygonscan.com/address/0x58bbdbfb6fca3129b91f0dbe372098123b38b5e9/transactions)
+* LINK: [`0x326C977E6efc84E512bB9C30f76E30c160eD06FB`](https://mumbai.polygonscan.com/address/0x70d1F773A9f81C852087B77F6Ae6d3032B02D2AB/transactions)
 
+To obtain LINK on Mumbai Testnet, head to the [Polygon faucet here](https://faucet.polygon.technology/).
 
-To obtain LINK on Mumbai Testnet, head to the <a href="https://faucet.polygon.technology/" target="_blank">faucet here</a>.
-
-# Which APIs are Supported?
+## Supported APIs
 
 Chainlink's Request and Receive cycle is flexible enough to call any public API, so long as the request parameters are correct and the response format is known. For example, if the response object from a URL we want to fetch from is formatted like this: `{"USD":243.33}`, the path is simple: `"USD"`.
 
-If an API responds with a complex JSON object, the "path" parameter would need to specify where to retrieve the desired data, using a dot delimited string for nested objects. For example, take the following response:
+If an API responds with a complex JSON object, the **path** parameter would need to specify where to retrieve the desired data, using a dot delimited string for nested objects. For example, consider the following response:
 
-```JSON
+```json
 {
    "Prices":{
         "USD":243.33
@@ -192,18 +200,18 @@ If an API responds with a complex JSON object, the "path" parameter would need t
 }
 ```
 
-This would require the following path: `"Prices.USD"`. If there are spaces in the stings, or the strings are quite long, we can use the syntax shown in the example above, where we pass them all as a string array.
+This would require the following path: `"Prices.USD"`. If there are spaces in the strings, or the strings are quite long, we can use the syntax shown in the example above, where we pass them all as a string array.
 
-```
+```json
 string[] memory path = new string[](2);
 path[0] = "Prices";
 path[1] = "USD";
 request.addStringArray("path", path);
 ```
 
-# What Are Job IDs For?
+## What Are Job IDs For?
 
-You may have noticed that example uses a `jobId` parameter when building the request. Jobs are comprised of a sequence of instructions that an oracle is configured to run. In the [code example](#code-example) above, the contract makes a request to the oracle with the job ID: `da20aae0e4c843f6949e5cb3f7cfe8c4`. This particular job is configured to do the following:
+You may have noticed that our [example](#code-example) uses a `jobId` parameter when building the request. Jobs are comprised of a sequence of instructions that an oracle is configured to run. In the [code example](#code-example) above, the contract makes a request to the oracle with the job ID: `da20aae0e4c843f6949e5cb3f7cfe8c4`. This particular job is configured to do the following:
 
 * Make a GET request 
 * Parse the JSON response
@@ -225,6 +233,4 @@ Here is the list of jobs that the Polygon oracle is configured to run.
 | HTTP GET | `bytes32` | `a82495a8fd5b4cb492b17dc0cc31a4fe ` | `httpget`<br/>`jsonparse`<br/>`ethbytes32`<br/>`ethtx`  |
 | HTTP POST | `bytes32` | `a82495a8fd5b4cb492b17dc0cc31a4fe ` | `httppost`<br/>`jsonparse`<br/>`ethbytes32`<br/>`ethtx`  |
 
-Read more about job specifications [here](https://docs.chain.link/docs/job-specifications).
-
-The complete Chainlink API reference can be found [here](https://docs.chain.link/docs/chainlink-framework).
+The complete Chainlink API reference can be found [here](https://docs.chain.link/any-api/api-reference).

@@ -2,25 +2,27 @@
 id: api3
 title: API3
 sidebar_label: API3
-description: "First-party oracles to access off-chain data"
+description: API3 is a first-party oracle that delivers more security, efficiency, and data-source transparency.
 keywords:
-  - docs
-  - matic
+  - wiki
+  - polygon
   - api3
   - oracle
-image: https://matic.network/banners/matic-network-16x9.png 
+  - off-chain data
+image: https://wiki.polygon.technology/img/polygon-wiki.png
 ---
+
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ## Overview
 
-[API3](https://api3.org) is a collaborative project to deliver traditional API services to smart contract platforms in a decentralized and trust-minimized way. It is governed by a decentralized autonomous organization (DAO), namely the [API3 DAO](https://api3.org/dao).
+[API3](https://api3.org) is a collaborative project to **deliver traditional API services to smart contract platforms** in a decentralized and trust-minimized way. It is governed by a decentralized autonomous organization (DAO), namely the [API3 DAO](https://api3.org/dao).
 
 ## First-party oracles
 
 An [Airnode](https://docs.api3.org/airnode) is a **first-party oracle** that pushes off-chain API data to your on-chain contract. Airnode lets API providers easily run their own oracle nodes. That way, they can provide data to any on-chain dApp that's interested in their services, all without an intermediary.
 
-An on-chain smart contract makes a request in the [RRP protocol contract (AirnodeRrpV0.sol)](https://docs.api3.org/airnode/v0.9/concepts/) that adds the request to the event logs. The Airnode then accesses the event logs, fetches the API data and performs a callback to the requester with the requested data.
+An on-chain smart contract makes a request in the [**RRP protocol contract (AirnodeRrpV0.sol)**](https://docs.api3.org/airnode/v0.9/concepts/) that adds the request to the event logs. The Airnode then accesses the event logs, fetches the API data and performs a callback to the requester with the requested data.
 
 ## Requesting off-chain data by calling an Airnode
 
@@ -29,8 +31,7 @@ through your smart contract. The smart contract in this case would be the
 requester contract which will make a request to the desired off-chain Airnode
 and then capture its response.
 
-The requester calling an Airnode primarily
-focuses on two tasks:
+The requester calling an Airnode primarily focuses on two tasks:
 
 - **Make the request**
 - **Accept and decode the response**
@@ -92,7 +93,7 @@ contract Requester is RrpRequesterV0 {
 }
 ```
 
-The `_rrpAddress` is the main `airnodeRrpAddress`. The RRP Contracts have already been deployed on-chain. You can check the address for Polygon [here](https://docs.api3.org/airnode/v0.9/reference/airnode-addresses.html).
+The `_rrpAddress` is the main `airnodeRrpAddress`. The RRP Contracts have already been deployed on-chain. You can check the address for Polygon [here](https://docs.api3.org/airnode/v0.9/reference/airnode-addresses.html). You can also try [**deploying it on Remix**](https://remix.ethereum.org/#url=https://github.com/vanshwassan/RemixContracts/blob/master/contracts/Requester.sol&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.9+commit.e5eed63a.js)
 
 ### Request parameters
 
@@ -105,17 +106,15 @@ The `makeRequest()` function expects the following parameters to make a valid re
 
 ### Response parameters
 
-The callback to the Requester contains two parameters:
+The callback to the **Requester** contains two parameters:
 
 - [`requestId`](https://docs.api3.org/airnode/v0.9/concepts/request.html#requestid): First acquired when making the request and passed here as a reference to identify the request for which the response is intended.
-- `data`: In case of a successful response, this is the requested data which has been encoded and contains a timestamp in addition to other response data. Decode it using the `decode()` function from the abi object.
-
-### [Try deploying it on Remix!](https://remix.ethereum.org/#url=https://github.com/vanshwassan/RemixContracts/blob/master/contracts/Requester.sol&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.9+commit.e5eed63a.js)
+- `data`: In case of a successful response, this is the requested data which has been encoded and contains a timestamp in addition to other response data. Decode it using the `decode()` function from the `abi` object.
 
 ## Using API3 QRNG 
 
 [API3 QRNG](https://docs.api3.org/qrng/) is a public utility we provide with the courtesy of [Australian National University (ANU)](https://www.anu.edu.au/). It is powered by an Airnode hosted by [ANU Quantum Random Numbers](https://quantumnumbers.anu.edu.au/), meaning that it is a first-party service.
-It is served as a public good and is free of charge (apart from the gas costs), and it provides ‘true’ quantum randomness via an easy-to-use solution when requiring RNG on-chain.
+It is served as a public good and is free of charge (apart from the gas costs), and it **provides ‘true’ quantum randomness** via an easy-to-use solution when requiring RNG on-chain.
 
 To request randomness on-chain, the requester submits a request for a random number to `AirnodeRrpV0`. The ANU Airnode gathers the request from the `AirnodeRrpV0` protocol contract, retrieves the random number off-chain, and sends it back to `AirnodeRrpV0`. Once received, it performs a callback to the requester with the random number.
 
@@ -191,7 +190,7 @@ contract RemixQrngExample is RrpRequesterV0 {
 }
 ```
 
-- The `setRequestParameters()` takes in `airnode` (The ANU Airnode address) , `endpointIdUint256`, `sponsorWallet` and sets these parameters. You can get Airnode address and the endpoint ID [here](https://docs.api3.org/qrng/reference/providers.html)
+- The `setRequestParameters()` takes in `airnode` (The ANU Airnode address) , `endpointIdUint256`, `sponsorWallet` and sets these parameters. You can get Airnode address and the endpoint ID [here](https://docs.api3.org/qrng/reference/providers.html).
 - The `makeRequestUint256()` function calls the `airnodeRrp.makeFullRequest()` function of the `AirnodeRrpV0.sol` protocol contract which adds the request to its storage and returns a `requestId`.
 - The targeted off-chain ANU Airnode gathers the request and performs a callback to the requester with the random number.
 
@@ -200,7 +199,7 @@ You can read more about API3 QRNG [here](https://docs.api3.org/qrng/).
 ### [Try deploying it on Remix!](https://remix.ethereum.org/#url=https://github.com/vanshwassan/RemixContracts/blob/master/contracts/QrngRequester.sol&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.9+commit.e5eed63a.js)
 
  ## Decentralized price feeds
-[dAPIs](https://docs.api3.org/dapis/) are decentralized price feeds engrained with risk protection. Using a first-party architecture dAPIs provide a transparent, secure and scaleable price feed solution. 
+[dAPIs](https://docs.api3.org/dapis/) are decentralized price feeds engrained with risk protection. Using a first-party architecture dAPIs provide a transparent, secure, and scalable price feed solution. 
 
 Developers can access dAPIs through the [API3 Market](https://bit.ly/api3marketpolywiki), where data feeds are easily searched, monitored, and consumed. 
 

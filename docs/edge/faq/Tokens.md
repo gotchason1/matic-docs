@@ -8,7 +8,6 @@ keywords:
   - edge
   - FAQ
   - tokens
-  
 ---
 
 ## Does Polygon Edge support EIP-1559?

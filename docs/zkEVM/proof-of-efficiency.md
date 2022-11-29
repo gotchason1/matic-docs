@@ -2,10 +2,11 @@
 id: proof-of-efficiency
 title: Proof of Efficiency
 sidebar_label: Proof of Efficiency
-description: "Detailed description of Proof of Efficiency consensus mechanism"
+description: Detailed description of Proof of Efficiency consensus mechanism
 keywords:
   - docs
   - zk rollups
+  - Polygon zkEVM
   - polygon
   - proof
   - efficiency
@@ -13,8 +14,6 @@ keywords:
   - zkEVM
 image: https://matic.network/banners/matic-network-16x9.png
 ---
-
-# Proof of Efficiency
 
 ## Background
 
@@ -77,9 +76,9 @@ A smart contract verifies the validity proofs to ensure that each transition is 
 
 To carry out these procedures, zkEVM employs two sorts of participants: **Sequencers** and **Aggregators**. Under this two-layer model: 
 
-- [**Sequencers**](https://wiki.polygon.technology/docs/zkEVM/zkNode#sequencers) &rarr; propose transaction batches to the network, i.e. they roll-up the transaction requests in batches and add them to the PoE Smart Contract.
+- [**Sequencers**](/docs/zkEVM/zknode/overview.md#sequencers) &rarr; propose transaction batches to the network, i.e. they roll-up the transaction requests in batches and add them to the PoE Smart Contract.
 
-- [**Aggregators**](https://wiki.polygon.technology/docs/zkEVM/zkNode#aggregators) &rarr; check the validity of the transaction batches and provide validity proofs. Any permissionless Aggregator can submit the proof to demonstrate the correctness of the state transition computation.
+- [**Aggregators**](/docs/zkEVM/zknode/overview.md#aggregators) &rarr; check the validity of the transaction batches and provide validity proofs. Any permissionless Aggregator can submit the proof to demonstrate the correctness of the state transition computation.
 
 The PoE Smart Contract, therefore, makes two calls: One to receive batches from Sequencers, and another to Aggregators, requesting batches to be validated.
 

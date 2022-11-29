@@ -2,17 +2,16 @@
 id: some-examples
 title: Some Examples
 sidebar_label: Some Examples
-description: "Compendium of useful examples."
+description: Compendium of useful examples
 keywords:
   - docs
   - polygon
   - zkASM
   - zkEVM
   - examples
+  - Polygon zkEVM
 image: https://matic.network/banners/matic-network-16x9.png
 ---
-
-# Some Examples
 
 ## EVM ADD
 

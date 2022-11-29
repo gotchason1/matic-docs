@@ -1,6 +1,6 @@
 ---
 id: lx-ly-bridge
-title: LX-LY Bridge
+title: LX-to-LY Bridge
 sidebar_label: LX-to-LY Bridge
 description: Introduction to Lx-to-Ly bridges on zk rollups
 keywords:
@@ -12,10 +12,9 @@ keywords:
   - hermez
   - bridge
   - zkEVM
+  - Polygon zkEVM
 image: https://matic.network/banners/matic-network-16x9.png
 ---
-
-# LX-to-LY Bridge
 
 An LX-LY bridge is a Smart Contract that lets users transfer their assets between two layers, LX and LY. The L1-L2 in zkEVM is a decentralised bridge for secure deposits and withdrawal of assets. It is a combination of two smart contracts, one deployed on one chain and the second on the other.
 

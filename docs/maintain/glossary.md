@@ -89,7 +89,7 @@ See also [Bor Consensus: Span](/docs/pos/bor/consensus.md#span).
 
 ## Staking
 
-Staking is the process of locking up tokens into a deposit to earn the right to validate and produce blocks on a blockchain. Typically staking is done in the native token for the network — for the MATIC token is locked up by validators / stakers in the Polygon Network. Other examples include ETH in ETH 2.0, ATOM in Cosmos, etc.
+Staking is the process of locking up tokens into a deposit to earn the right to validate and produce blocks on a blockchain. Typically staking is done in the native token for the network — for the MATIC token is locked up by validators / stakers in the Polygon Network. Other examples include ETH in Ethereum (post-merge), ATOM in Cosmos, etc.
 
 See also [What Is Proof of Stake](polygon-basics/what-is-proof-of-stake.md).
 
@@ -103,7 +103,7 @@ See also [Key Management](validator/core-components/key-management.md).
 
 ## Validator
 
-The validator role stakes the MATIC tokens and is running both the [Heimdall](#heimdall) node and the [Bor](#bor) node to commit the network checkpoints to the Ethereum mainnet and to produce blocks on the network.
+Validators [stake their MATIC tokens](/docs/maintain/validate/validator-staking-operations) via staking contracts deployed on the Ethereum mainnet and are running both the [Heimdall](#heimdall) node and the [Bor](#bor) node to commit the network checkpoints to the Ethereum mainnet and to produce blocks on the network.
 
 A validator node is only open to its [sentry](#sentry) node and closed to the rest of the network.
 

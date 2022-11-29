@@ -2,24 +2,26 @@
 id: optimisticoracle
 title: UMA's Optimistic Oracle 
 sidebar_label: UMA
-description:  "Optimistic settlements for an efficent Oracle solution."
+description: UMA's Optimistic Oracle allows contracts to quickly request and receive any kind of data
 keywords:   
-  - docs
+  - wiki
+  - polygon
   - oracle
   - UMA
-image: https://matic.network/banners/matic-network-16x9.png 
+  - Optimistic Oracle
+image: https://wiki.polygon.technology/img/polygon-wiki.png
 ---
 
-## Getting started 
-UMA's oracle system is comprised of two core components:
+UMA's Optimistic Oracle allows contracts to quickly request and receive any kind of data. UMA's oracle system is comprised of two core components:
 
 1. Optimistic Oracle
-
 2. Data Verification Mechanism (DVM)
 
 ## Optimistic Oracle
 
-UMA's Optimistic Oracle allows contracts to quickly request and receive price information. The Optimistic Oracle acts as a generalized escalation game between contracts that initiate a price request and UMA's dispute resolution system known as the Data Verification Mechanism (DVM). Prices proposed by the Optimistic Oracle will not be sent to the DVM unless it is disputed. This enables contracts to obtain price information within any pre-defined length of time without the need to have the price of an asset written on-chain.
+UMA's **Optimistic Oracle** allows contracts to quickly request and receive price information. The Optimistic Oracle acts as a generalized escalation game between contracts that initiate a price request and UMA's dispute resolution system known as the Data Verification Mechanism (DVM).
+
+Prices proposed by the Optimistic Oracle will not be sent to the DVM unless it is disputed. This enables contracts to obtain price information within any pre-defined length of time without writing the price of an asset on-chain.
 
 ## Data Verification Mechanism (DVM)
 
@@ -27,13 +29,15 @@ If a dispute is raised, a request is sent to the DVM. All contracts built on UMA
 
 The Data Verification Mechanism (DVM) is the dispute resolution service for contracts built on UMA Protocol. The DVM is powerful because it encompasses an element of human judgment to ensure contracts are securely and correctly managed when issues arise from volatile (and sometimes manipulatable) markets.
 
-## Optimistic Oracle Interface
+## Optimistic Oracle Interface 
 
-The vast majority of projects will only require the Optimistic Oracle for their implimentations. 
+The Optimistic Oracle is used by financial contracts or any third party to retrieve prices. Once a price is requested, anyone can propose a price in response. Once proposed, the price goes through a liveness period where anyone can dispute the proposed price and send the disputed price to the UMA DVM for settlement.
+
+:::info
 
 This section explains how different participants can interact with the Optimistic Oracle. To view the most updated mainnet, kovan or L2 deployments of the Optimistic Oracle contracts, refer to the [production addresses](https://docs.umaproject.org/dev-ref/addresses).
 
-The Optimistic Oracle is used by financial contracts or any third party to retrieve prices. Once a price is requested, anyone can propose a price in response. Once proposed, the price goes through a liveness period where anyone can dispute the proposed price and send the disputed price to the UMA DVM for settlement.
+:::
 
 There are twelve methods that make up the Optimistic Oracle interface.
 -  `requestPrice`
@@ -83,7 +87,7 @@ Parameters:
 
 ### settle
 
-Attempts to settle an outstanding price request. Will revert if it isn’t settleable.
+Attempts to settle an outstanding price request. Will revert if it can’t be settled.
 
 Parameters:
 - `requester`: sender of the initial price request.
@@ -172,7 +176,7 @@ Parameters:
 - `ancillaryData`: ancillary data of the price being requested.
 - `proposedPrice`: price being proposed.
 
-# Integrating the Optimistic Oracle
+## Integrating the Optimistic Oracle
 
 This demo will set up an `OptimisticDepositBox` contract which custodies a user’s ERC-20 token balance.
 
@@ -200,9 +204,9 @@ In the demo, the requestor does not require an additional bond from the price pr
 2. Run a local Ganache instance (i.e. not Kovan/Ropsten/Rinkeby/Mainnet) with `yarn ganache-cli --port 9545`
 3. In another window, migrate the contracts by running the following command:
 
-```bash
-yarn truffle migrate --reset --network test
-```
+  ```bash
+  yarn truffle migrate --reset --network test
+  ```
 
 1. To deploy the `OptimisticDepositBox` [contract](https://github.com/UMAprotocol/protocol/blob/master/packages/core/contracts/financial-templates/demo/OptimisticDepositBox.sol) and go through a simple user flow, run the following demo script from the root of the repo:
 
@@ -249,7 +253,7 @@ You should see the following output:
 
 ## Explaining the Contract Functions
 
-The `OptimisticDepositBox` [contract code](https://github.com/UMAprotocol/protocol/blob/master/packages/core/contracts/financial-templates/demo/OptimisticDepositBox.sol) how to interact with the Oracle.
+The `OptimisticDepositBox` [contract code](https://github.com/UMAprotocol/protocol/blob/master/packages/core/contracts/financial-templates/demo/OptimisticDepositBox.sol) shows how to interact with the Oracle.
 
 The `constructor` function includes a `_finderAddress` argument for the UMA `Finder` contract, which maintains a registry of the `OptimisticOracle` address, approved collateral and price identifier whitelists, and other important contract addresses.
 
@@ -257,9 +261,9 @@ This allows the `constructor` to check that the collateral type and price identi
 
 The `requestWithdrawal` function includes an internal call to the `OptimisticOracle` requesting the `ETH/USD` price. Once it's returned, the user can call `executeWithdrawal` to complete the withdrawal.
 
-There is much more information and explanation in the code comments, so please take a look if you're interested in learning more!
+There is much more information and explanation in the code comments, so please take a look if you're interested in learning more.
 
-# Additional Resources
+## Additional Resources
 
 Here are some additional resources regarding the UMA DVM:
 

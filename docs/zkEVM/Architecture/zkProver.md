@@ -10,10 +10,9 @@ keywords:
   - zkProver
   - zkROM
   - zkExecutor
+  - Polygon zkEVM
 image: https://matic.network/banners/matic-network-16x9.png
 ---
-
-# zkProver
 
 Core to the integrity of the **Polygon zkEVM** is its zero-knowledge prover, aka the **zkProver**.
 

@@ -1,6 +1,6 @@
 ---
 id: advanced-features
-title: Advanced features
+title: Advanced Features
 sidebar_label: Advanced features
 description: "Advanced features supported by PIL."
 keywords:
@@ -11,10 +11,9 @@ keywords:
   - permutation
   - check
   - connect
+  - Polygon zkEVM
 image: https://matic.network/banners/matic-network-16x9.png
 ---
-
-# Advanced Features
 
 This last section wraps the documentation around PIL by introducing some advanced features that PIL supports, such as permutation checks over multiple (possibly distinct) domains.
 

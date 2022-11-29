@@ -1,6 +1,6 @@
 ---
 title: Tellor
-description: "A guide to integratie the Tellor oracle into your Polygon contract."
+description: "A guide to integrate the Tellor oracle into your Polygon contract."
 author: "Tellor"
 lang: en
 sidebar: true
@@ -23,7 +23,7 @@ Assumptions:
 - you have npm installed
 - you know how to use npm to manage dependencies
 
-Tellor is a live and open-sourced oracle ready for implementation. This beginner's guide is here to showcase the ease with which one can get up and running with Tellor, providing your project with a fully decentralized and censorship-resistent oracle.
+Tellor is a live and open-sourced oracle ready for implementation. This beginner's guide is here to showcase the ease with which one can get up and running with Tellor, providing your project with a fully decentralized and censorship-resistant oracle.
 
 ## Overview
 
@@ -54,35 +54,46 @@ Here's an example:
 ```solidity
 import "usingtellor/contracts/UsingTellor.sol";
 
-contract BtcPriceContract is UsingTellor {
+contract PriceContract is UsingTellor {
+
+  uint256 public btcPrice;
 
   //This Contract now has access to all functions in UsingTellor
-
-  bytes btcPrice;
-  bytes32 btcQueryId = 0x0000000000000000000000000000000000000000000000000000000000000002;
 
   constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) public {}
 
   function setBtcPrice() public {
+
+    bytes memory _b = abi.encode("SpotPrice",abi.encode("btc","usd"));
+    bytes32 _queryID = keccak256(_b);
+
     bool _didGet;
     uint256 _timestamp;
+    bytes _value;
 
-    (_didGet, btcPrice, _timestamp) = getCurrentValue(btcQueryId);
+    (_value, _timestamp) = getDataBefore(_queryId, block.timestamp - 15 minutes);
+
+    btcPrice = abi.decode(_value,(uint256));
   }
 }
 ```
-
-**Want to try a different data feed? Check out the list of supported data feeds here:
-[Current Data Feeds](https://docs.tellor.io/tellor/integration/data-feed-ids)**
 
 ## Addresses:
 
 Tellor Tributes: [`0xe3322702bedaaed36cddab233360b939775ae5f1`](https://polygonscan.com/token/0xe3322702bedaaed36cddab233360b939775ae5f1#code)
 
-Oracle: [`0xfd45ae72e81adaaf01cc61c8bce016b7060dd537`](https://polygonscan.com/address/0xfd45ae72e81adaaf01cc61c8bce016b7060dd537#code)
+Oracle: [`0x8f55D884CAD66B79e1a131f6bCB0e66f4fD84d5B`](https://polygonscan.com/address/0x8f55D884CAD66B79e1a131f6bCB0e66f4fD84d5B#code)
 
 #### Looking to do some testing first?:
 
-Polygon Mumbai Testnet: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7 `](https://mumbai.polygonscan.com/address/0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7/contracts#code)
+Polygon Mumbai Testnet: [`0x8f55D884CAD66B79e1a131f6bCB0e66f4fD84d5B `](https://mumbai.polygonscan.com/address/0x8f55D884CAD66B79e1a131f6bCB0e66f4fD84d5B/contracts#code)
+
+Test Tributes: [`0xCE4e32fE9D894f8185271Aa990D2dB425DF3E6bE`](https://mumbai.polygonscan.com/token/0xCE4e32fE9D894f8185271Aa990D2dB425DF3E6bE#code)
+
+Need some test tokens? Tweet us at ['@trbfaucet'](https://twitter.com/trbfaucet)
+
+For ease of use, the  UsingTellor  repo comes with a version of the [Tellor Playground](https://github.com/tellor-io/TellorPlayground) contract for easier integration. See [here](https://github.com/tellor-io/sampleUsingTellor#tellor-playground) for a list of helpful functions.
 
 #### For a more robust implementation of the Tellor oracle, check out the full list of available functions [here.](https://github.com/tellor-io/usingtellor/blob/master/README.md)
+
+#### Still have questions? Join the community [here!](https://discord.gg/tellor)

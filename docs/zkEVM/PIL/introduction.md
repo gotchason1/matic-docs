@@ -1,18 +1,17 @@
 ---
 id: introduction
-title: Introduction to Polynomial Identity Language
+title: Polynomial Identity Language
 sidebar_label: Introduction
-description: "The concept of Polynomial Identity Language."
+description: The concept of Polynomial Identity Language
 keywords:
   - docs
   - polygon
   - PIL
   - state
   - machine
+  - Polygon zkEVM
 image: https://matic.network/banners/matic-network-16x9.png
 ---
-
-# Polynomial Identity Language
 
 ## Introduction
 

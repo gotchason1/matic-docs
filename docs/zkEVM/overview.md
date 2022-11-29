@@ -2,12 +2,13 @@
 id: overview
 title: Polygon zkEVM Architecture
 sidebar_label: Architecture
-description: "Introduction to Polygon zkEVM and it's architecture"
+description: Introduction to Polygon zkEVM and it's architecture
 keywords:
   - docs
   - zk rollups
   - polygon
   - proof
+  - Polygon zkEVM
   - efficiency
   - hermez
   - zkEVM
@@ -15,8 +16,6 @@ keywords:
   - architecture
 image: https://matic.network/banners/matic-network-16x9.png
 ---
-
-# Polygon zkEVM Architecture
 
 :::info
 
@@ -56,14 +55,14 @@ Our latest **Proof of Efficiency (PoE)** consensus mechanism leverages the exper
 
 Explore Proof of Efficiency in detail [here](proof-of-efficiency.md).
 
-## [zkNode](zkNode.md)
+## [zkNode](zknode/overview.md)
 
 zkNode is the software needed to run any zkEVM node. It is a client that the network requires to implement the Synchronization and govern the roles of the participants (Sequencers or Aggregators). Polygon zkEVM participants will choose how they participate:
 
 - As a node to know the state of the network, or
 - As a participant in the process of batch production in any of the two roles: **Sequencer** or **Aggregator**
 
-The zkNode architecture is modular in nature. You can dig deeper into zkNode and its components [here](zkNode.md).
+The zkNode architecture is modular in nature. You can dig deeper into zkNode and its components [here](zknode/overview.md).
 
 ### Incentivization Structure
 

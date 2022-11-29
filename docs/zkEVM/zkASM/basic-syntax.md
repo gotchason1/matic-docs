@@ -6,16 +6,17 @@ description: "Basic syntax of zkASM from a high-level point of view."
 keywords:
   - docs
   - polygon
+  - Polygon zkEVM
   - comment
   - module
   - register
   - opcode
   - assert
   - zkASM
+  - basic syntax
+  - zkEVM
 image: https://matic.network/banners/matic-network-16x9.png
 ---
-
-# Basic Syntax
 
 ## Overview
 This section is devoted to explain the basic syntax of zkASM from a high-level perspective. Advanced syntax is totally dependendant on the use case (e.g. the design of a zkEVM) and will be explained in more detail with more complete examples later on.

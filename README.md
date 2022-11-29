@@ -13,7 +13,7 @@
    <a href="https://github.com/maticnetwork/matic-docs/network/members"><img src="https://img.shields.io/github/forks/maticnetwork/matic-docs?style=social"></a>
    <img src="https://img.shields.io/github/stars/maticnetwork/matic-docs?style=social">
    <img src="https://img.shields.io/github/languages/count/maticnetwork/matic-docs">
-   <a href="https://github.com/maticnetwork/matic-docs/issues"> src="https://img.shields.io/github/issues/maticnetwork/matic-docs"></a>
+   <a href="https://github.com/maticnetwork/matic-docs/issues"><img src="https://img.shields.io/github/issues/maticnetwork/matic-docs"></a>
    <a href="https://github.com/maticnetwork/matic-docs/pulls"><img src="https://img.shields.io/github/issues-pr-raw/maticnetwork/matic-docs"></a>
    <a href="https://github.com/maticnetwork/matic-docs/graphs/contributors"><img src="https://img.shields.io/github/contributors-anon/maticnetwork/matic-docs"></a>
    <img src="https://img.shields.io/github/languages/code-size/maticnetwork/matic-docs">

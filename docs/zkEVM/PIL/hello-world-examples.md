@@ -8,10 +8,9 @@ keywords:
   - polygon
   - PIL
   - hello world
+  - Polygon zkEVM
 image: https://matic.network/banners/matic-network-16x9.png
 ---
-
-# Beginner Examples
 
 ## State Machine that Multiplies Two Numbers
 

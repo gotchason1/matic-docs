@@ -2,15 +2,15 @@
 id: modularity
 title: Modularity
 sidebar_label: Modularity
-description: "A modular design of state machines"
+description: A modular design of state machines
 keywords:
   - docs
   - polygon
   - PIL
+  - modular design
+  - Polygon zkEVM
 image: https://matic.network/banners/matic-network-16x9.png
 ---
-
-# Modularity
 
 ## Introduction
 

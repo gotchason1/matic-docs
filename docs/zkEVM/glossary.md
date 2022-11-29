@@ -1,6 +1,6 @@
 ---
 id: glossary
-title: Glossary
+title: Polygon zkEVM Glossary
 sidebar_label: Glossary
 description: "Definition of anything related to zkEVM"
 keywords:
@@ -9,10 +9,9 @@ keywords:
   - polygon
   - zkEVM
   - glossary
+  - Polygon zkEVM
 image: https://matic.network/banners/matic-network-16x9.png
 ---
-
-# Glossary
 
 ### Layer 1
 
