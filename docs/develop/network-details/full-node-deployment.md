@@ -74,7 +74,7 @@ Length in byte format - 4
   ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.2.16 heimdall_branch=v0.2.12 network_version=mainnet-v1 node_type=sentry/sentry heimdall_network=mainnet" --list-hosts
 
   # Testnet:
-  ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.2.16 heimdall_branch=v0.2.12 network_version=testnet-v4 node_type=sentry/sentry heimdall_network=mumbai" --list-hosts
+  ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.3.0 heimdall_branch=v0.3.0 network_version=testnet-v4 node_type=sentry/sentry heimdall_network=mumbai" --list-hosts
   ```
 
   <img src={useBaseUrl("img/network/full-node-mumbai.png")} />
@@ -86,7 +86,7 @@ Length in byte format - 4
   ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.2.16 heimdall_branch=v0.2.12 network_version=mainnet-v1 node_type=sentry/sentry heimdall_network=mainnet"
 
   # Testnet:
-  ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.2.16 heimdall_branch=v0.2.12 network_version=testnet-v4 node_type=sentry/sentry heimdall_network=mumbai"
+  ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.3.0 heimdall_branch=v0.3.0 network_version=testnet-v4 node_type=sentry/sentry heimdall_network=mumbai"
   ```
 
 - In case you run into any issues, delete and clean the whole setup using:

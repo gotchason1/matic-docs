@@ -16,8 +16,8 @@ image: https://wiki.polygon.technology/img/polygon-wiki.png
 This is the minimum hardware configuration required to setup a full node:
 
 - RAM: 16-32 GB
-- CPU: 4-8 core CPU (For AWS: **t3 xLarge**)
-- Storage: Minimum 1.2TB SSD (make sure it is extendable)
+- CPU: 4-8 core CPU (For AWS: **t3.2xlarge**)
+- Storage: 2.5TB to 5TB SSD (make sure it is extendable)
 
 :::tip
 

@@ -82,3 +82,20 @@ tar -xzvf <snapshot file> -C <BOR_DATA_DIRECTORY>
 // For example, this will unpack the tar file in the Bor data directory:
 tar -xzvf bor-fullnode-snapshot-2022-11-08.tar.gz -C ~/.bor/data/bor/chaindata
 ```
+
+:::note
+
+The `aria2c` method is used for downloading snapshots faster.
+There is an alternate way where the downloaded snapshots can be directly extracted without any intervention.
+
+**Steps for that:** 
+
+
+```bash title="For Heimdall"
+wget -c https://matic-blockchain-snapshots.s3-accelerate.amazonaws.com/matic-mainnet/heimdall-snapshot-2022-11-30.tar.gz -O - | tar -xzf - -C ~/.heimdalld/data/
+```
+
+```bash title="For Bor"
+wget -c     https://matic-blockchain-snapshots.s3-accelerate.amazonaws.com/matic-mainnet/bor-fullnode-snapshot-2022-11-21.tar.gz  -O - | tar -xzf - -C ~/.bor/data/bor/chaindata
+```
+:::

@@ -29,6 +29,19 @@ aria2c -x6 -s6 https://matic-blockchain-snapshots.s3-accelerate.amazonaws.com/ma
 tar xzf bor-fullnode-snapshot-2022-07-01.tar.gz -C /mnt/data/bor/bor/chaindata
 # at this point, you can start your containers back up. Pay attention to the logs to make sure everything looks good
 ```
+
+The `aria2c` method is used for downloading snapshots faster.
+There is an alternate way where the downloaded snapshots can be directly extracted without any intervention.
+
+**Steps for that:** 
+
+```bash title="For Heimdall"
+wget -c https://matic-blockchain-snapshots.s3-accelerate.amazonaws.com/matic-mainnet/heimdall-snapshot-2022-11-30.tar.gz -O - | tar -xzf - -C ~/.heimdalld/data/
+```
+
+```bash title="For Bor"
+wget -c     https://matic-blockchain-snapshots.s3-accelerate.amazonaws.com/matic-mainnet/bor-fullnode-snapshot-2022-11-21.tar.gz  -O - | tar -xzf - -C ~/.bor/data/bor/chaindata
+```
 :::
 
 ## Prerequisites
@@ -37,14 +50,14 @@ The general configuration for running a Polygon full node is to have **at least*
 
 These instructions are based on Docker, so it should be easy to follow along with almost any operating system, but we’re using Ubuntu.
 
-In terms of space, for a full node you’ll probably need at least 1.5 terabytes of SSD (or faster) storage.
+In terms of space, for a full node you’ll probably need from **2.5 to 5 terabytes of SSD (or faster) storage**.
 
 The peer exchange for a Polygon full node generally depends on port 30303 and 26656 being open. When you configure your firewall or security groups for AWS, make sure these ports are open along with whatever ports you need to access the machine.
 
 TLDR:
 
 - Use a machine with at least 4 cores and 16GB RAM
-- Make sure you have at least 1.5 TB of fast storage
+- Make sure you have from 2.5 TB to 5 TB of fast storage
 - Use a public IP and open ports 30303 and 26656
 
 ## Initial Setup
@@ -132,7 +145,7 @@ At this point, we have a host with docker running on it and we have ample mounte
 First let’s make sure we can run Heimdall with docker. Run the following command:
 
 ```bash
-docker run -it 0xpolygon/heimdall:0.2.12 heimdallcli version
+docker run -it 0xpolygon/heimdall:0.3.0 heimdallcli version
 ```
 
 If this is the first time you’ve run Heimdall with docker, it should pull the required image automatically and output the version information.
@@ -144,7 +157,7 @@ If you’d like to check the details of the Heimdall image or find a different t
 At this point, let’s run the Heimdall `init` command to set up our home directory.
 
 ```bash
-docker run -v /mnt/data/heimdall:/heimdall-home:rw --entrypoint /usr/local/bin/heimdalld -it 0xpolygon/heimdall:0.2.12 init --home=/heimdall-home
+docker run -v /mnt/data/heimdall:/heimdall-home:rw --entrypoint /usr/local/bin/heimdalld -it 0xpolygon/heimdall:0.3.0 init --home=/heimdall-home
 ```
 
 Let’s break this command down a bit in case anything goes wrong.
@@ -159,7 +172,7 @@ Let’s break this command down a bit in case anything goes wrong.
 
 * The switch `-it` is used to run the command interactively.
 
-* Finally we’re specifying which image we want to run with `0xpolygon/heimdall:0.2.12`.
+* Finally we’re specifying which image we want to run with `0xpolygon/heimdall:0.3.0`.
 
 * After that `init --home=/heimdall-home` are arguments being passed to the heimdalld executable. `init` is the command we want to run and `--home` is used to specify the location of the home directory.
 
@@ -240,7 +253,7 @@ docker network create polygon
 Now we’re going to start Heimdall. Run the following command:
 
 ```bash
-docker run -p 26657:26657 -p 26656:26656 -v /mnt/data/heimdall:/heimdall-home:rw --net polygon --name heimdall --entrypoint /usr/local/bin/heimdalld -d --restart unless-stopped  0xpolygon/heimdall:0.2.12 start --home=/heimdall-home
+docker run -p 26657:26657 -p 26656:26656 -v /mnt/data/heimdall:/heimdall-home:rw --net polygon --name heimdall --entrypoint /usr/local/bin/heimdalld -d --restart unless-stopped  0xpolygon/heimdall:0.3.0 start --home=/heimdall-home
 ```
 
 Many of the pieces of this command will look familiar. So let’s talk about what’s new.
@@ -339,7 +352,7 @@ At this point, you should have a node that’s successfully running Heimdall. Yo
 Before we get started with Bor, we need to run the Heimdall rest server. This command will start a REST API that Bor uses to retrieve information from Heimdall. The command to start server is:
 
 ```bash
-docker run -p 1317:1317 -v /mnt/data/heimdall:/heimdall-home:rw --net polygon --name heimdallrest --entrypoint /usr/local/bin/heimdalld -d --restart unless-stopped 0xpolygon/heimdall:0.2.12 rest-server --home=/heimdall-home --node "tcp://heimdall:26657"
+docker run -p 1317:1317 -v /mnt/data/heimdall:/heimdall-home:rw --net polygon --name heimdallrest --entrypoint /usr/local/bin/heimdalld -d --restart unless-stopped 0xpolygon/heimdall:0.3.0 rest-server --home=/heimdall-home --node "tcp://heimdall:26657"
 ```
 
 There are two pieces of this command that are different and worth noting. Rather than running the `start` command, we’re running the `rest-server` command. Also, we’re passing `~–node “tcp://heimdall:26657”~` which tells the rest server how to communicate with Heimdall.
@@ -368,7 +381,7 @@ Let’s verify the `sha256 sum` again for this file:
 Now we need to `init` the Bor home directory. This command is similar to what we did for Heimdall:
 
 ```bash
-docker run -v /mnt/data/bor:/bor-home:rw -it  0xpolygon/bor:0.2.16 --datadir /bor-home init /bor-home/genesis.json
+docker run -v /mnt/data/bor:/bor-home:rw -it  0xpolygon/bor:0.3.0 --datadir /bor-home init /bor-home/genesis.json
 ```
 
 Most of the pieces of this command should look very familiar. Instead of `--home` we’re setting the `--datadir` flag to tell Bor where to preserve the data.
@@ -404,7 +417,7 @@ tree /mnt/data/bor/
 At this point, we should be ready to start Bor. We’re going to use this command:
 
 ```bash
-docker run -p 30303:30303 -p 8545:8545 -v /mnt/data/bor:/bor-home:rw --net polygon --name bor -d --restart unless-stopped  0xpolygon/bor:0.2.16 --datadir /bor-home \
+docker run -p 30303:30303 -p 8545:8545 -v /mnt/data/bor:/bor-home:rw --net polygon --name bor -d --restart unless-stopped  0xpolygon/bor:0.3.0 --datadir /bor-home \
   --port 30303 \
   --bor.heimdall 'http://heimdallrest:1317' \
   --http --http.addr '0.0.0.0' \
