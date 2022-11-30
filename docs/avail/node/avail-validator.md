@@ -9,7 +9,7 @@ keywords:
   - avail
   - node
   - validator
-image: https://matic.network/banners/matic-network-16x9.png
+image: https://wiki.polygon.technology/img/thumbnail/polygon-avail.png
 slug: avail-validator
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';

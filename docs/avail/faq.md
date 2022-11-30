@@ -11,7 +11,7 @@ keywords:
   - client
   - consensus
   - faq
-image: https://matic.network/banners/matic-network-16x9.png
+image: https://wiki.polygon.technology/img/thumbnail/polygon-avail.png
 slug: faq
 ---
 

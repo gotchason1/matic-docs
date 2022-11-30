@@ -10,7 +10,7 @@ keywords:
   - data
   - availability
   - architecture
-image: https://matic.network/banners/matic-network-16x9.png
+image: https://wiki.polygon.technology/img/thumbnail/polygon-avail.png
 slug: avail-system-overview
 ---
 
