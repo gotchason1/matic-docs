@@ -2,14 +2,14 @@
 id: testnet
 title: Testnet
 sidebar_label: Testnet
-description: "Tools, adresses and useful links for testnet deployment."
+description: Tools, adresses and useful links for Nightfall Testnet deployment.
 keywords:
   - docs
   - polygon
   - nightfall
   - testnet
   - address
-image: https://matic.network/banners/matic-network-16x9.png
+image: https://wiki.polygon.technology/img/thumbnail/polygon-nightfall.png
 ---
 
 Polygon Nightfall is now live on **Goerli**.

@@ -2,7 +2,7 @@
 id: protocol
 title: Nightfall Protocol
 sidebar_label: Nightfall Protocol
-description: "The Nightfall Process."
+description: The Nightfall Protocol.
 keywords:
   - docs
   - polygon
@@ -12,7 +12,7 @@ keywords:
   - block
   - structure
   - layer
-image: https://matic.network/banners/matic-network-16x9.png
+image: https://wiki.polygon.technology/img/thumbnail/polygon-nightfall.png
 ---
 
 We assume that at least 1 Proposer has registered with the system, posting a minimum Stake.

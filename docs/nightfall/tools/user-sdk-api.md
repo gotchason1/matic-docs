@@ -8,7 +8,7 @@ keywords:
   - polygon
   - nightfall
   - sdk
-image: https://matic.network/banners/matic-network-16x9.png
+image: https://wiki.polygon.technology/img/thumbnail/polygon-nightfall.png
 ---
 
 The User API serves as an interface that allows for easy interaction with the Nightfall Protocol. The User can be created via the `userFactory` class.

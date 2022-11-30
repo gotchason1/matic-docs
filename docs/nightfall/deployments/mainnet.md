@@ -2,14 +2,14 @@
 id: mainnet
 title: Mainnet
 sidebar_label: Mainnet
-description: "Tools, adresses and useful links for mainnet deployment."
+description: Tools, adresses and useful links for Nightfall Mainnet deployment.
 keywords:
   - docs
   - polygon
   - nightfall
   - mainnet
   - address
-image: https://matic.network/banners/matic-network-16x9.png
+image: https://wiki.polygon.technology/img/thumbnail/polygon-nightfall.png
 ---
 
 :::note

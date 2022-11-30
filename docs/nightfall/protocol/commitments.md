@@ -2,14 +2,14 @@
 id: commitments
 title: Commitments and Nullifiers 
 sidebar_label: Commitment and Nullifiers
-description: "Single and double transfer"
+description: Single and double transfer
 keywords:
   - docs
   - polygon
   - nightfall
   - commitment
   - nullifier
-image: https://matic.network/banners/matic-network-16x9.png
+image: https://wiki.polygon.technology/img/thumbnail/polygon-nightfall.png
 ---
 
 ## **What are Commitments?**

@@ -9,7 +9,7 @@ keywords:
   - nightfall
   - block
   - explorer
-image: https://matic.network/banners/matic-network-16x9.png
+image: https://wiki.polygon.technology/img/thumbnail/polygon-nightfall.png
 ---
 
 :::note This page is under construction

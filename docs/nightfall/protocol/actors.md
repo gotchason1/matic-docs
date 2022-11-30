@@ -2,7 +2,7 @@
 id: actors
 title: Actors
 sidebar_label: Actors
-description: "Types of Actors on Nightfall"
+description: Types of Actors on Polygon Nightfall
 keywords:
   - docs
   - polygon
@@ -12,7 +12,7 @@ keywords:
   - challenger
   - liquidity
   - provider
-image: https://matic.network/banners/matic-network-16x9.png
+image: https://wiki.polygon.technology/img/thumbnail/polygon-nightfall.png
 ---
 
 There are four actors involved in the network:

@@ -2,15 +2,16 @@
 id: overview
 title: Overview
 sidebar_label: Overview
-description: An overview on Nightfall
+description: An overview on Polygon Nightfall's Optimistic ZK Rollup
 keywords:
   - docs
   - polygon
   - nightfall
   - privacy
+  - optimistic
   - rollup
   - zk
-image: https://matic.network/banners/matic-network-16x9.png
+image: https://wiki.polygon.technology/img/thumbnail/polygon-nightfall.png
 ---
 
 Polygon believes in a vision that sees many companies in the near future interacting with each

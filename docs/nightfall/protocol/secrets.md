@@ -2,7 +2,7 @@
 id: secrets
 title: In Band Secret Distribution
 sidebar_label: In Band Secret Distribution
-description: "A solution to encrypt secrets and ensure their decryption."
+description: A solution to encrypt secrets and ensure their decryption.
 keywords:
   - docs
   - polygon
@@ -10,7 +10,7 @@ keywords:
   - secret
   - encryption
   - key
-image: https://matic.network/banners/matic-network-16x9.png
+image: https://wiki.polygon.technology/img/thumbnail/polygon-nightfall.png
 ---
 import katex from 'katex';
 

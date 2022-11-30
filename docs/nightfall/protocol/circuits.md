@@ -2,7 +2,7 @@
 id: circuits
 title: Circuits and Transactions
 sidebar_label: Circuits and Transactions
-description: "Types of Circuits on Nightfall"
+description: Types of Circuits on Polygon Nightfall
 keywords:
   - docs
   - polygon
@@ -10,7 +10,7 @@ keywords:
   - circuits
   - deposit
   - transfer
-image: https://matic.network/banners/matic-network-16x9.png
+image: https://wiki.polygon.technology/img/thumbnail/polygon-nightfall.png
 ---
 
 Circuits are used to define the rules that a transaction must follow to be considered correct. There are broadly three types of circuits, one for each type of transaction:

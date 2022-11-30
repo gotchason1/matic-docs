@@ -2,7 +2,7 @@
 id: contracts
 title: Smart Contracts
 sidebar_label: Smart Contracts
-description: "Shield, proposers, challenges and Merkle Tree Computations."
+description: Shield, proposers, challenges and Merkle Tree Computations in Polygon Nightfall.
 keywords:
   - docs
   - polygon
@@ -10,7 +10,7 @@ keywords:
   - smart
   - contracts
   - shield
-image: https://matic.network/banners/matic-network-16x9.png
+image: https://wiki.polygon.technology/img/thumbnail/polygon-nightfall.png
 ---
 
 Contracts define the rules that each Nightfall actor needs to follow in order to operate in the network. 

@@ -1,14 +1,15 @@
 ---
 id: versions
 title: History
-sidebar_label: History of changes
-description: "Deployed versions"
+sidebar_label: History of Changes
+description: Deployed versions of Polygon Nightfall
 keywords:
   - docs
   - polygon
   - nightfall
   - changelog
-image: https://matic.network/banners/matic-network-16x9.png
+  - versions
+image: https://wiki.polygon.technology/img/thumbnail/polygon-nightfall.png
 ---
 
 ## **Beta 1.0**
