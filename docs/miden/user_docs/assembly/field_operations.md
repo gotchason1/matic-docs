@@ -9,7 +9,7 @@ keywords:
   - polygon
   - miden
   - operation
-image: https://matic.network/banners/matic-network-16x9.png 
+image: https://wiki.polygon.technology/img/thumbnail/polygon-miden.png
 ---
 
 Miden assembly provides a set of instructions which can perform operations with raw field elements. These instructions are described in the tables below.

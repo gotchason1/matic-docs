@@ -9,7 +9,7 @@ keywords:
   - polygon
   - miden
   - library
-image: https://matic.network/banners/matic-network-16x9.png 
+image: https://wiki.polygon.technology/img/thumbnail/polygon-miden.png
 ---
 
 Miden standard library provides a set of procedures which can be used by any Miden program. These procedures build on the core instruction set of [Miden assembly](../assembly/main.md) expanding the functionality immediately available to the user.

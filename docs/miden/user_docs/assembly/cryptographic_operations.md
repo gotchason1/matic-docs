@@ -9,7 +9,7 @@ keywords:
   - polygon
   - miden
   - cryptographic
-image: https://matic.network/banners/matic-network-16x9.png 
+image: https://wiki.polygon.technology/img/thumbnail/polygon-miden.png
 ---
 
 Miden assembly provides a set of instructions for performing common cryptographic operations. These instructions are listed in the table below.

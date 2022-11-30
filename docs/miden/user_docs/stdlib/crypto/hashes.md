@@ -11,7 +11,7 @@ keywords:
   - hash
   - BLAKE3
   - SHA256
-image: https://matic.network/banners/matic-network-16x9.png 
+image: https://wiki.polygon.technology/img/thumbnail/polygon-miden.png
 ---
 
 Namespace `std::crypto` contains modules for commonly used cryptographic hash functions.

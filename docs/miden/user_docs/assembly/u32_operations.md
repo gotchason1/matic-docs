@@ -9,7 +9,7 @@ keywords:
   - polygon
   - miden
   - u32
-image: https://matic.network/banners/matic-network-16x9.png 
+image: https://wiki.polygon.technology/img/thumbnail/polygon-miden.png
 ---
 
 Miden assembly provides a set of instructions which can perform operations on regular 32-bit integers. These instructions are described in the tables below.

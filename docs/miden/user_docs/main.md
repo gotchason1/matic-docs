@@ -2,14 +2,14 @@
 id: main
 title: User Documentation
 sidebar_label: User Documentation
-description: "Documentation summary."
+description: Documentation summary.
 keywords:
   - docs
   - matic
   - polygon
   - miden
   - documentation
-image: https://matic.network/banners/matic-network-16x9.png 
+image: https://wiki.polygon.technology/img/thumbnail/polygon-miden.png
 ---
 
 # User Documentation

@@ -10,7 +10,7 @@ keywords:
   - miden
   - loop
   - conditional
-image: https://matic.network/banners/matic-network-16x9.png 
+image: https://wiki.polygon.technology/img/thumbnail/polygon-miden.png
 ---
 
 As mentioned before, Miden assembly provides high-level constructs to facilitate flow control. These constructs are:

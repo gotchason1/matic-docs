@@ -10,7 +10,7 @@ keywords:
   - miden
   - stack
   - manipulation
-image: https://matic.network/banners/matic-network-16x9.png 
+image: https://wiki.polygon.technology/img/thumbnail/polygon-miden.png
 ---
 
 Miden VM stack is a push-down stack of field elements. The stack has a maximum depth of $2^{16}$, but only the top $16$ elements are directly accessible via the instructions listed below.
