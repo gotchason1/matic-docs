@@ -90,7 +90,7 @@ module.exports = {
         "develop/wallets/getting-started",
         {
           type: "category",
-          label: "Third-Party Wallet Applications",
+          label: "Third-Party Apps",
           link: {
             type: "generated-index",
           },
@@ -145,7 +145,6 @@ module.exports = {
             type: "generated-index",
           },
           items: [
-            "develop/wallets/polygon-web-wallet/web-wallet-v2-guide",
             "develop/wallets/polygon-web-wallet/web-wallet-v3-guide",
             "develop/wallets/polygon-web-wallet/deposit-eth-dai-on-polygon",
           ],
