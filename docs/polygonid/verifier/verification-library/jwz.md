@@ -11,7 +11,7 @@ keywords:
   - jwz
   - zero
   - knowledge
-image: https://matic.network/banners/matic-network-16x9.png
+image: https://wiki.polygon.technology/img/thumbnail/polygon-id.png
 ---
 
 JSON Web Zero-knowledge (JWZ) is an open standard for representing messages proven with zero-knowledge technology.

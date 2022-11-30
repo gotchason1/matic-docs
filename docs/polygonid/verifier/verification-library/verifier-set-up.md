@@ -9,7 +9,7 @@ keywords:
   - id
   - json
   - verifier
-image: https://matic.network/banners/matic-network-16x9.png
+image: https://wiki.polygon.technology/img/thumbnail/polygon-id.png
 ---
 
 import Tabs from '@theme/Tabs';

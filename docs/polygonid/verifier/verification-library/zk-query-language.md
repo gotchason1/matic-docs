@@ -9,7 +9,7 @@ keywords:
   - id
   - query
   - language
-image: https://matic.network/banners/matic-network-16x9.png
+image: https://wiki.polygon.technology/img/thumbnail/polygon-id.png
 ---
 
 The <a href="https://docs.iden3.io/protocol/main-circuits/#credentialatomicquerysig" target="_blank">`Atomic Query Signature Circuit`</a> and <a href="https://docs.iden3.io/protocol/main-circuits/#credentialatomicquerymtp" target="_blank">`Atomic Query MTP`</a> circuits have been designed as generic circuits to do the zk verification based on users' claims. 
