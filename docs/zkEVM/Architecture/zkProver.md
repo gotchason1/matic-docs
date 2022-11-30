@@ -11,7 +11,7 @@ keywords:
   - zkROM
   - zkExecutor
   - Polygon zkEVM
-image: https://matic.network/banners/matic-network-16x9.png
+image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 Core to the integrity of the **Polygon zkEVM** is its zero-knowledge prover, aka the **zkProver**.

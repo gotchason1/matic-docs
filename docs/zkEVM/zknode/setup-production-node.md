@@ -12,7 +12,7 @@ keywords:
   - production zknode
   - tutorial
   - Polygon zkEVM
-image: https://matic.network/banners/matic-network-16x9.png
+image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 Polygon zkEVM is now available on the public testnet for developers to launch smart contracts, execute transactions, and experiment with the network. This tutorial extends the exploration by allowing developers to **launch their own node on the zkEVM Public Testnet**.

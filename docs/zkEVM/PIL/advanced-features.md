@@ -12,7 +12,7 @@ keywords:
   - check
   - connect
   - Polygon zkEVM
-image: https://matic.network/banners/matic-network-16x9.png
+image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 This last section wraps the documentation around PIL by introducing some advanced features that PIL supports, such as permutation checks over multiple (possibly distinct) domains.

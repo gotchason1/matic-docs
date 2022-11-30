@@ -11,7 +11,7 @@ keywords:
   - github
   - zkevm
   - zkprover
-image: https://matic.network/banners/matic-network-16x9.png
+image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 This document provides the complete list of all available source code repositories related to Polygon zkEVM and its components including the zkProver. Feel free to check out the [Polygon zkEVM](https://github.com/0xPolygonHermez) organization on Github.
